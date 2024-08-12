@@ -8,52 +8,19 @@ Para este sprint, creé un hub de entretenimiento al cual llamé "trinity" que c
 
 ##### Requerimientos técnicos
 
-El proyecto está realizado con Angular 12, también hice uso de Bootstrap y CSS puro, además para este nuevo sprint utilice MySQL para mi base de datos y Node JS junto con Express para mi API.
+El proyecto está realizado con Visual Basic 6 y además cuenta con una base de datos SQL.
 
 ---
 
 ##### Uso del proyecto
 
-Para poder hacer uso del proyecto, es necesario tener instalado NodeJs y Angular (en este caso, la versión 12).
-Primero se debe de instalar NodeJs, para instalarlo se puede hacer desde la terminal o bien con un instalador. Como mencioné anteriormente, el proyecto lo desarrollé con Angular 12 por lo tanto debemos instalar NodeJs en su versión 14 o una versión menor a la 16, en mi caso instalé la versión 14.17.6, a continuación adjunto el enlace directo para descargarlo: [NodeJs 14.17.6](https://nodejs.org/en/blog/release/v14.17.6).
+Para poder hacer uso del proyecto es necesario descargar el proyecto en nuestro equipo local o bien, clonarlo con el siguiente comando:
 
-NodeJs también nos instalará NPM, como manejador de paquetes, en este caso la versión requerida es la 6.
+`https://github.com/aslizzie/trinity.git`
 
-Después de tener instalado lo anterior, podemos instalar Angular, para esto hay que abrir una terminal y ejecutamos el siguiente comando:
-`npm install -g @angular/cli@12`
+Después es necesario crear la base de datos que utilizará nuestro proyecto, para ello he adjunto un archivo SQL llamado "dump.sql" en la carpeta dump.
 
-Luego de esto, es necesario clonar el proyecto en nuestro servidor local con el comando:
-`git clone https://github.com/aslizzie/angular-wave.git`
-
-De nuevo haciendo uso de la terminal, nos colocamos en la carpeta del proyecto que acabamos de clonar y ejecutamos el siguiente comando, el cual descargará las dependencias o librerias necesarias para el proyecto:
-`npm install`
-
-Una vez que el proyecto este instalado, es necesario instalar y configurar la API para el correcto funcionamiento del proyecto. Para hacer esto, primero hay que clonar el proyecto que contiene la API con el siguiente comando:
-`git clone https://github.com/aslizzie/api-wave.git`
-
-(Como recomendación, recomiendo clonar el proyecto que contiene la API en una carpeta diferente a donde se encuentra el proyecto de Angular)
-
-Luego de clonarlo, nos colocamos en la carpeta del proyecto que acabamos de clonar y ejecutamos el siguiente comando, que de igual manera nos descargará las dependencias o librerías que son necesarias para que la API funcione:
-`npm install`
-
-Ahora lo que necesitamos es crear la base de datos de donde nuestra API obtendrá los datos, para esto cree una archivo contenido en donde se encuentra un script cargado con información, este archivo se encuentra dentro de la carpeta dump de nuestra API:
-
-![Markdown logo](/documentation/dump_sql.png)
-
-O bien, también se puede obtener en el siguiente enlace:
-[https://drive.google.com/file/d/1weVa6KEhJP296Y8cm4GDoI2ly3lYdygF/view?usp=sharing](https://drive.google.com/file/d/1weVa6KEhJP296Y8cm4GDoI2ly3lYdygF/view?usp=sharing).
-
-Despues de crear nuestra base de datos con sus datos correspondientes, es necesario configurar la API, así que en el archivo db.js que se encuentra en la carpeta config dentro de src vamos a configurarla con los datos que corresponden a nuestro servidor local, en este caso se pide el host, user, password y el nombre de la base de datos.
-
-![Markdown logo](/documentation/db_config.png)
-
-Como ultimos pasos y para que nuestro proyecto funcione correctamente necesitamos correr nuestra API con el comando:
-`npm run dev`
-
-Y en nuestro proyecto de Angular vamos a ejecutar el comando:
-`ng serve`
-
-Y listo! Nuestro proyecto estará funcional!
+![Markdown logo](/documentation/dump-sql.png)
 
 ---
 
@@ -61,39 +28,84 @@ Y listo! Nuestro proyecto estará funcional!
 
 A continuación, se muestran capturas de pantalla del proyecto y una breve explicación de lo que se presenta en cada captura.
 
-###### Vista - Movies
+###### Vista de login
 
-![Markdown logo](/documentation/movies.png)
-En esta captura se muestra la vista con el listado de películas.
+![Markdown logo](/documentation/login.png)
+En esta captura se muestra el login del proyecto.
 
-###### Vista - Movie
+###### Vista principal para rol de admin
 
-![Markdown logo](/documentation/movie.png)
-En esta captura se muestra la vista con la información de un elemente en específico.
+![Markdown logo](/documentation/main-admin.png)
+En esta captura se muestra la vista principal del administrador donde se puede ver que tiene diferentes funcionalidades como buscar, agregar y eliminar un libro.
 
-###### Vista - Series
+###### Vista para agregar un libro
 
-![Markdown logo](/documentation/series.png)
-En esta captura se muestra la vista con el listado de series.
+![Markdown logo](/documentation/main-add-book.png)
+En esta captura se muestra la vista donde se pueden agregar libros.
 
-###### Vista - Series
+###### Mensaje después de agregar un libro
 
-![Markdown logo](/documentation/serie.png)
-En esta captura se muestra la vista con la información de un elemente en específico.
+![Markdown logo](/documentation/main-add-book-message.png)
+En esta captura se muestra el mensaje que le aparece al usuario después de agregar un libro nuevo.
+
+###### Mensaje para eliminar un libro
+
+![Markdown logo](/documentation/main-delete-book-message.png)
+En esta captura se muestra el mensaje que le aparece al usuario antes de eliminar un libro.
+
+###### Mensaje después eliminar un libro
+
+![Markdown logo](/documentation/main-deleted-book-message.png)
+En esta captura se muestra el mensaje que le aparece al usuario después de eliminar un libro.
+
+###### Búsqueda de un libro
+
+![Markdown logo](/documentation/main-search.png)
+En esta captura se muestra el resultado de una búsqueda de un libro.
+
+###### Vista principal para rol de usuario normal
+
+![Markdown logo](/documentation/user-main.png)
+En esta captura se muestra la vista principal de un usuario normal donde se puede ver que tiene diferentes funcionalidades como agregar un libro a favoritos, ver todos los favoritos del usuario y también buscar un libro.
+
+###### Vista principal para rol de usuario normal
+
+![Markdown logo](/documentation/user-search-fav.png)
+En esta captura se muestra el resultado de una búsqueda de un libro.
+
+###### Búsqueda de un libro
+
+![Markdown logo](/documentation/user-search-fav.png)
+En esta captura se muestra el resultado de una búsqueda de un libro.
+
+###### Vista de favoritos de un usuario
+
+![Markdown logo](/documentation/user-favorites.png)
+En esta captura se muestra la vista de los favoritos de un usuario.
+
+###### Mensaje para eliminar un libro de favoritos
+
+![Markdown logo](/documentation/user-delete-book-message.png)
+En esta captura se muestra el mensaje que le aparece al usuario antes de eliminar un libro de favoritos.
+
+###### Mensaje después de eliminar un libro de favoritos
+
+![Markdown logo](/documentation/user-deleted-book-message.png)
+En esta captura se muestra el mensaje que le aparece al usuario después de eliminar un libro de favoritos.
 
 ---
 
 ##### Proceso para realizar el proyecto
 
 Para llevar a cabo este sprint lo primero que realice fue el diseño y la normalización de mi base de datos, el diagrama se muestra a continuación:
-![Markdown logo](/documentation/bd-diagrama.drawio.png)
+![Markdown logo](/documentation/trinity.png)
 
-Luego de hacer el diagrama comencé con la creación de mi base de datos en SQL usando un sistema de gestión de base de datos. Despues estuve leyendo documentación para realizar mi API con Node JS y Express, una vez que entendí un poco esta parte comencé con el desarrollo de la API igualmente durante el desarrollo estuve consultando la documentación para entender mejor lo que estaba haciendo. Finalmente hice la integración de mi API con el front-end de mi proyecto en Angular.
+Luego de hacer el diagrama comencé con la creación de mi base de datos en SQL usando un sistema de gestión de base de datos. Despues estuve leyendo documentación comencé con el desarrollo de mi proyecto.
 
 ---
 
 ##### Sprint review
 
-| ¿Qué salió bien?                                                                                                                                                                                                           | ¿Qué puedo hacer diferente?                                                                                                                                                                                                                                                                                                                                               | ¿Qué no salió bien?                                                                                                                                                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lo que considero que salió bien fue que logré crear mi API y que mi proyecto en Angular pudiera obtener la información de esa API de manera eficiente lo que significa que mi proyecto ya maneja datos de manera dinámica. | Lo que considero que podría hacer diferente es seguir leyendo documentación para continuar aprendiendo sobre Angular, ya que al momento de querer realizar la autenticación del usuario mediante el uso de la API y la base de datos tuve ciertos problemas, así que para el próximo sprint espero completar ese modulo y agregar más funcionalidades que tengo en mente. | Lo que considero que no salió bien en este sprint es que no pude completar del todo los requisitos que se pidieron en el backlog porque aún no entiendo del todo como funciona Angular y las API´s, también siento que aún me cuesta un poco gestionar mis tiempos. |
+| ¿Qué salió bien?                                                                                                                            | ¿Qué puedo hacer diferente?                                                                                                                                                                                                    | ¿Qué no salió bien?                                                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Lo que considero que salió bien fue que logré realizar las funcionalidades básicas del proyecto con una interfaz agradable para el usuario. | Lo que considero que podría hacer diferente es seguir leyendo documentación para continuar aprendiendo sobre Visual Basic 6 para poder generar una mejorar interfaz para el usuario, además de incluir funcionalidades extras. | Lo que considero que no salió bien en este sprint es que no pude completar del todo los requisitos que se pidieron en el backlog porque aún no entiendo del todo como funciona Visual Basic 6. |
